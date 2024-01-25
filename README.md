@@ -6,7 +6,7 @@ HouseHunter is a comprehensive House rental website that facilitates users in re
 
 ## Live Website Preview
 
-[![Project Screenshot](https://github.com/Nahid4306053/HouseHunter-client/blob/7c7663a7dd25707dffeff0b798d95f7a70b86ba5/public/images/full_web_priview.jpg)](https://househunterv2.netlify.app/)
+[![Project Screenshot](https://github.com/Nahid4306053/HouseHunter-client/blob/b433be35d483be834f525e0a599854bb3ec5711f/public/images/full_web_priview.jpg)](https://househunterv2.netlify.app/)
 
 [Click to View Live Website](https://househunterv2.netlify.app/)
 
