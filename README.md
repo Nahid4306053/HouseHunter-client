@@ -1,4 +1,4 @@
-# HouseHunter - House Rental and Community Platform
+# HouseHunter - Online House Rental Platform
 
 ## Project Overview
 
@@ -6,24 +6,22 @@ HouseHunter is a comprehensive House rental website that facilitates users in re
 
 ## Live Website Preview
 
-[![Project Screenshot](https://github.com/Nahid4306053/HouseHunter-Client-Side/blob/0195ca3f948cd4eccc70aad9c3fcf388ae8d3204/public/images/full_web_priview.jpg)](https://HouseHunterv1.netlify.app)
+[![Project Screenshot](https://github.com/Nahid4306053/HouseHunter-client/blob/7c7663a7dd25707dffeff0b798d95f7a70b86ba5/public/images/full_web_priview.jpg)](https://househunterv2.netlify.app/)
 
-[Click to View Live Website](https://HouseHunterv1.netlify.app)
+[Click to View Live Website](https://househunterv2.netlify.app/)
 
 ### Features
 
 1. **House Rental System**
+   - Browse and filter houses by various criteria, including per-month rent, availability status, number of bedrooms, number of bathrooms, and more.
+   - Online payment system for rental transactions with flexible payment plans, accommodating both per-month and per-day options.
+   - User authentication required for renting houses, ensuring a secure and personalized experience.
 
-   - Users can browse and filter cars by brand, model, status, and price.
-   - Online payment system for rental transactions on a per-day basis.
-   - User authentication is required for renting cars.
-
-2. **Community Hub**
-
-   - Users can share their House journey experiences as posts.
-   - Users can view and comment on posts, see who commented, and track post views.
-   - Post authors are visible to other users.
-   - A popular post section highlights trending community content.
+2 **Filter Options:**
+   - **Rent Type:** Filter houses by per-month rent, per-day rent, or other customizable options.
+   - **Availability Status:** Browse houses based on availability status (e.g., available, booked, upcoming).
+   - **Bedroom and Bathroom Count:** Narrow down options by specifying the desired number of bedrooms and bathrooms.
+   - **Time Availability:** Set specific rental periods or durations to find houses available during your preferred time.
 
 3. **Review System**
 
