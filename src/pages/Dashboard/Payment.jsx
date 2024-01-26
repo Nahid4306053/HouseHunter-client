@@ -55,6 +55,7 @@ export default function Payment() {
                     <PaymentCardForm
                       totalpay={BookingData.data.totalPrice}
                       booking_id={BookingData.data._id}
+                      owner={BookingData.data.HouseData.owner}
                       Houseid={BookingData.data.HouseData._id}
                       start={BookingData.data.start}
                       end={BookingData.data.end}

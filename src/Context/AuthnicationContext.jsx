@@ -59,6 +59,12 @@ export default function AuthnicationContext({ children }) {
     getCurrentUser()
   },[])
 
+  const UpdateProfile = async (username,avatar) =>{
+     const res = await AxiosPublicV1.put(`${import.meta.env.VITE_API_URL_V1}/user/update`, {username: username || CurrentUser.username,avatar: avatar || CurrentUser.avatar });
+     getCurrentUser()
+     return res ; 
+     
+  }
 
   const Signup = async (username, email, password, avatar, phone, role) => {
     await AxiosPublicV1.post(`${import.meta.env.VITE_API_URL_V1}/user`, { username, email, password, avatar, phone, role, });
@@ -85,7 +91,8 @@ export default function AuthnicationContext({ children }) {
         setloading,
         CurrentUser,
         SetCurrentUser,
-        getCurrentUser
+        getCurrentUser,
+        UpdateProfile
       }}
     >
       {!loading && children}

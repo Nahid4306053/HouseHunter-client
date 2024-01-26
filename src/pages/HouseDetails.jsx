@@ -9,6 +9,7 @@ import CarReview from "../components/Dashboard/Rating/CarReview";
 import PageBanner from "../components/shared/PageBanner";
 import SmallError from "../components/shared/SmallError";
 import SmallLoading from "../components/shared/SmallLoading";
+import ad_banner from '/images/ad_banner.png'
 export default function CarDetails() {
   const { id } = useParams();
   const { FullHouseDetails, error, isError, isLoading, isSuccess } =
@@ -91,7 +92,7 @@ export default function CarDetails() {
               <CarReview id={id}></CarReview>
               <div className="p-16 bg-sky-300 text-white mt-10 space-y-4">
                 <h3 className="text-2xl font-bold">
-                  Do you want some modifications or schedule a test drive ?
+                  Do you want to Visit the house and view it?
                 </h3>
                 <p>
                   Integer tor bibendum estnu faucibus gravida aliquam nu lectus
@@ -100,7 +101,7 @@ export default function CarDetails() {
                 <div className="flex justify-end">
                   <Link to="/contact">
                     <button className="btn btn-outline rounded-none border-r-4 border-white text-white">
-                      Send Details
+                      Contact Now
                     </button>
                   </Link>
                 </div>
@@ -117,7 +118,7 @@ export default function CarDetails() {
             <BookingHouse data={FullHouseDetails.data}></BookingHouse>
             <div className="mt-14">
               <Link to={"/cars"}>
-                <img src="https://i.ibb.co/hVLxxb9/add.png" alt="" />
+                <img src={ad_banner} alt="" />
               </Link>
             </div>
           </div>

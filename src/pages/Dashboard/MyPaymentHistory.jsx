@@ -56,7 +56,7 @@ export default function MyPaymentHistory() {
                     <h3 className="my-3 text-xl ">
                       Your Payment Histroy is Empty
                     </h3>
-                    <Link to="../../houses">
+                    <Link to="../../house">
                       <button className="btn bg-sky-500   hover:bg-sky-500   text-white capitalize btn-sm">
                         Visit Our Houses Page
                       </button>

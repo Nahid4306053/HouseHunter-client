@@ -14,6 +14,7 @@ import Testimonial from "../components/Home/Testimonial";
 import WhyChooseUs from "../components/Home/WhyChooseUs";
 import PageBanner from "../components/shared/PageBanner";
 import SectionTitle from "../components/shared/SectionTitle";
+import SearchBar from "../components/Home/SearchBar";
 
 export default function Home() {
   ScrollTop(0, 0);
@@ -30,24 +31,12 @@ export default function Home() {
             <h1 className="md:text-5xl pt-5 text-3xl  text-white font-bold ita">
               Discover Your Stay
             </h1>
+         
             <h3 className="md:text-3xl text-xl text-white italic">
               Rent Your Dream House Today - Seamless, Reliable, Unforgettable
             </h3>
-            <div className="">
-              <Link to={"/house"}>
-                <button
-                  style={{
-                    clipPath:
-                      "polygon(100% 0, 100% 70%, 90% 85%, 80% 80%, 50% 100%, 21% 80%, 10% 85%, 0 69%, 0 0)",
-                  }}
-                  className="md:mt-8 md:btn-lg bg-sky-500   hover:bg-sky-500   btn border-none pb-2 text-white rounded-none"
-                >
-                  Explore Houses
-                </button>
-              </Link>
-              <br />
-              <i className="fa-solid fa-fade text-3xl mt-10 text-white fa-chevrons-down"></i>
-            </div>
+            <br />
+            <SearchBar/>
           </div>
         </div>
       </PageBanner>

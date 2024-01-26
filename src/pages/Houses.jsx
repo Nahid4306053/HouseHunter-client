@@ -16,6 +16,7 @@ import PageBanner from "../components/shared/PageBanner";
 import HouseDetailsCard from "../components/shared/HouseDetailsCard";
 import SmallError from "../components/shared/SmallError";
 import SmallLoading from "../components/shared/SmallLoading";
+import SearchBar from "../components/Home/SearchBar";
 
 export default function Houses() {
   ScrollTop();
@@ -27,7 +28,7 @@ export default function Houses() {
     9,
     search || "?"
   );
-  console.log(FilterData)
+  
   useEffect(() => {
     if (search) { 
       setpage(1);
@@ -49,6 +50,8 @@ export default function Houses() {
           <h3 className="md:text-2xl text-xl text-white italic">
             Rent Your Dream House Today - Seamless, Reliable, Unforgettable
           </h3>
+          <br />
+          <SearchBar></SearchBar>
         </div>
       </PageBanner>
       <div className="container my-28  mx-auto">

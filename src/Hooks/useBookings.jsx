@@ -7,7 +7,7 @@ export default function useBookings(page,limit) {
   const Tlimit = limit || 10 ;                  
   const axios = useAxiosPublicV1();
     const fetchBookings = async () => {
-     const res = await axios.get(`/car/bookings?page=${Tpage}&limit=${Tlimit}`);
+     const res = await axios.get(`/house/bookings?page=${Tpage}&limit=${Tlimit}`);
       return res;
      };
     const { data: Bookings, isLoading, isError, error,isSuccess } = useQuery({

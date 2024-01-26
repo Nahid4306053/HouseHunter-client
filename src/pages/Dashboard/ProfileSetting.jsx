@@ -12,11 +12,11 @@ export default function ProfileSetting() {
   const [readmood, setReadmood] = useState(true);
   const { CurrentUser } = useAuth();
   const [UploadIMG, setUploadIMG] = useState();
-  const { displayName, email, avatar, additionalInfo } = CurrentUser || {};
+  const { username, email, avatar, additionalInfo } = CurrentUser || {};
   const [profilepic, setProfilepic] = useState(avatar);
   const { UpdateProfile } = useAuth();
   const [forminfo, setFormInfo] = useState({
-    displayName,
+    username,
     email,
     avatar,
     additionalInfo,
@@ -27,7 +27,7 @@ export default function ProfileSetting() {
     form.preventDefault();
     const formdata = {};
     const err = [];
-    formdata.displayName = form.target.displayName.value.trim();
+    formdata.username = form.target.username.value.trim();
     formdata.additionalInfo = form.target.additionalInfo.value.trim();
     const avatar = form.target.avatar.files;
     const type = ["image/jpeg", "image/png", "image/jpg"];
@@ -37,7 +37,7 @@ export default function ProfileSetting() {
         err.push("Upload A Profile img with type .jpg .png .jpeg");
       }
     }
-    if (formdata.displayName.length < 3) {
+    if (formdata.username.length < 3) {
       toast.error("Please Provide Your Name");
       err.push("Please Provide Your Name");
     }
@@ -47,15 +47,16 @@ export default function ProfileSetting() {
           const uploadIMG = await uploadIMGBB(avatar[0]);
           if (uploadIMG.data.data.display_url) {
             const newavatar = uploadIMG.data.data.display_url;
-            const res = await UpdateProfile(formdata.displayName, newavatar);
-            console.log(res);
+            const res = await UpdateProfile(formdata.username, newavatar);
+           
           } else {
             toast.error("A problem occured whene save img");
           }
         } else {
-          const res = await UpdateProfile(formdata.displayName, "");
+          const res = await UpdateProfile(formdata.username, "");
           if (res) {
             setReadmood(true);
+            toast.success("Profile Update Succefully")
           }
         }
       } catch (err) {
@@ -107,12 +108,12 @@ export default function ProfileSetting() {
         <div className="col-span-7 pt-10 space-y-4">
           <Input
             readOnly={readmood}
-            defaultValue={forminfo.displayName}
+            defaultValue={forminfo.username}
             required
             type="text"
             placeholder="Display Name"
             label="Display Name"
-            name="displayName"
+            name="username"
           ></Input>
           <Input
             value={forminfo.email}

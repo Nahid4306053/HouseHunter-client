@@ -9,7 +9,7 @@ export default function MangeBookingsStatus({ id }) {
   const QueryClient = useQueryClient();
   const mutation = useMutation({
     mutationFn: async (data) => {
-      const res = await AxioSecureV1.patch(`/car/book/status/${id}`, data);
+      const res = await AxioSecureV1.patch(`/house/book/status/${id}`, data);
       return res;
     },
 

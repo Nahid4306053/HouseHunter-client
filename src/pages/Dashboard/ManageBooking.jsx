@@ -18,7 +18,7 @@ export default function ManageBookings() {
   );
 
   return (
-    <div className="cars p-5">
+    <div className="Houses p-5">
       <div className="text-center overflow-y-auto flex justify-center text-white">
         <h1 className="p-5 px-10 text-2xl text-center bg-sky-500   clipshape2 shadow-lg">
           Manage Bookings
@@ -29,7 +29,7 @@ export default function ManageBookings() {
         <table className="table  border-white ">
           <thead className="h-14  text-sm">
             <tr>
-              <th>Brand Name</th>
+              <th>House Name</th>
               <th>Rent Date</th>
               <th>Total Price</th>
               <th>House Status</th>
@@ -48,8 +48,8 @@ export default function ManageBookings() {
             </div>
           ) : (
             <tbody>
-              {Bookings.data.cars.length > 0 ? (
-                Bookings.data.cars.map((ele) => {
+              {Bookings.data.Houses.length > 0 ? (
+                Bookings.data.Houses.map((ele) => {
                   return (
                     <TableRow key={ele._id} data={ele}>
                       <td>
@@ -61,7 +61,7 @@ export default function ManageBookings() {
                           </div>
                           <div>
                             <div className="font-bold text-xs">
-                              {ele.Renter?.displayName.slice(0, 10)}
+                              {ele.Renter?.username.slice(0, 10)}
                             </div>
                           </div>
                         </div>
@@ -86,9 +86,9 @@ export default function ManageBookings() {
                 <tr>
                   <td colSpan={6} className="flex flex-col items-center my-10">
                     <h2 className="text-xl">No Data Found</h2>
-                    <Link to="../../cars">
+                    <Link to="../../Houses">
                       <button className="btn-sm btn bg-sky-500   hover:bg-sky-500   text-white">
-                        View cars
+                        View Houses
                       </button>
                     </Link>
                   </td>

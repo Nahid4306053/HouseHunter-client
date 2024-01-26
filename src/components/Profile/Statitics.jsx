@@ -19,7 +19,6 @@ export default function Statitics() {
       return res;
     },
   });
-
   return (
     <div className="p-14">
       {isLoading ? (
@@ -33,33 +32,24 @@ export default function Statitics() {
       ) : (
         <>
           <div className="user grid grid-cols-1 mt-5 md:grid-cols-2 gap-14">
-            <StatisticCard
-              icon={<i className="fa-solid fa-user"></i>}
-              title={"Total User"}
-            >
-              <p className="text-xl">
-                {statistic.data.totaluser > 9
-                  ? statistic.data.totaluser
-                  : "0" + statistic.data.totaluser}
-              </p>
-            </StatisticCard>
+
             <StatisticCard
               icon={<i className="fa-regular fa-chart-line-up"></i>}
               title={"Total Revinue"}
             >
-              <p className="text-xl">${statistic.data.totalRevenue}</p>
+              <p className="text-xl">${parseFloat(statistic.data.totalRevenue).toFixed(2)}</p>
             </StatisticCard>
           </div>
           <div className="user grid grid-cols-1 mt-14  md:grid-cols-2 lg:grid-cols-3 gap-14">
             <div className="col-span-3 text-3xl font-bold"> House Status: </div>
             <StatisticCard
-              icon={<i className="fa-solid fa-car"></i>}
+              icon={<i className="fa-solid fa-house"></i>}
               title={"Available"}
             >
               <p className="text-xl">
-                {statistic.data.cars.Available > 9
-                  ? statistic.data.cars.Available
-                  : "0" + statistic.data.cars.Available}
+                {statistic.data.Houses.Available > 9
+                  ? statistic.data.Houses.Available
+                  : "0" + statistic.data.Houses.Available}
               </p>
             </StatisticCard>
             <StatisticCard
@@ -67,19 +57,19 @@ export default function Statitics() {
               title={"Booked"}
             >
               <p className="text-xl">
-                {statistic.data.cars.Booked > 9
-                  ? statistic.data.cars.Booked
-                  : "0" + statistic.data.cars.Booked}
+                {statistic.data.Houses.Booked > 9
+                  ? statistic.data.Houses.Booked
+                  : "0" + statistic.data.Houses.Booked}
               </p>
             </StatisticCard>
             <StatisticCard
-              icon={<i className="fa-solid fa-car-burst"></i>}
+              icon={<i className="fa-solid fa-house-flood-water"></i>}
               title={"Maintenance"}
             >
               <p className="text-xl">
-                {statistic.data.cars.Maintenance > 9
-                  ? statistic.data.cars.Maintenance
-                  : "0" + statistic.data.cars.Maintenance}
+                {statistic.data.Houses.Maintenance > 9
+                  ? statistic.data.Houses.Maintenance
+                  : "0" + statistic.data.Houses.Maintenance}
               </p>
             </StatisticCard>
           </div>

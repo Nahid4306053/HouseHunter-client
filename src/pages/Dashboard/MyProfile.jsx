@@ -29,7 +29,7 @@ export default function MyProfile() {
           />
         </div>
         <div className="deatils mt-24 pt-2  text-center  ">
-          <h3 className="name text-2xl font-bold">{CurrentUser.displayName}</h3>
+          <h3 className="name text-2xl font-bold">{CurrentUser.username}</h3>
           <h4>{CurrentUser.email}</h4>
         </div>
         {role === "user" && (
@@ -40,8 +40,8 @@ export default function MyProfile() {
 
             <div className="mt-10 flex-1 text-2xl  text-rose-400 ">
               <h1>
-                Hellow {CurrentUser.displayName} , Welocome Back, <br />
-                Complete Your Upcoming Booking Payment
+                Hellow {CurrentUser.username} , Welocome Back, <br />
+                Complete Your Bookings Payment
               </h1>
               <Link to="/dashboard/upcoming-bookings">
                 <button className="btn bg-sky-300 border-none hover:bg-sky-300 mt-7 text-white">
@@ -52,7 +52,7 @@ export default function MyProfile() {
           </div>
         )}
 
-        {role === "admin" && <Statitics></Statitics>}
+        {role === "House Owner" && <Statitics></Statitics>}
       </div>
     </div>
   );

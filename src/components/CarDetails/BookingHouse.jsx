@@ -71,6 +71,7 @@ export default function BookingHouse({ data }) {
 
       if (err.length === 0) {
         Formdata.HouseData = data._id;
+        Formdata.owner = data.owner;
         mutation.mutate(Formdata);
       }
     } else {

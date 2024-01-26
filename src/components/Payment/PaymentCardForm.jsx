@@ -21,6 +21,7 @@ const CheckoutForm = ({
   booking_id,
   start,
   end,
+  owner,
 }) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -35,6 +36,7 @@ const CheckoutForm = ({
         HouseData: Houseid,
         booking_id,
         totalpay,
+        owner,
         transectionId: transectionId,
         start,
         end,
@@ -135,7 +137,7 @@ const CheckoutForm = ({
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
 
-const Payment = ({ totalpay, Houseid, booking_id, start, end }) => {
+const Payment = ({ totalpay,owner, Houseid, booking_id, start, end }) => {
   return (
     <Elements stripe={stripePromise}>
       <CheckoutForm
@@ -143,6 +145,7 @@ const Payment = ({ totalpay, Houseid, booking_id, start, end }) => {
         Houseid={Houseid}
         booking_id={booking_id}
         end={end}
+        owner={owner}
         start={start}
       />
     </Elements>
